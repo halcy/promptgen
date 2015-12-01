@@ -1,0 +1,114 @@
+<html><head><title>Prompt Generator</title>
+<link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+	background: url('bg4.png');
+}
+a:link, a:active, a:visited, a:hover {
+	color: rgba(255, 135, 213, 1.0);
+}
+
+div#centerbox {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	text-align:center;
+	background: rgba(255, 255, 255, 0.7);
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 0px;
+	border: 5px solid rgba(255, 135, 213, 1.0);
+	border-radius: 25px;
+}
+
+div#centerbox p {
+	font-family: 'Fredoka One', cursive;
+	font-size: 24pt;
+	margin: 15px;
+	color: rgba(30, 50, 50, 1.0);
+}
+
+div#centerbox p#randlink {
+	text-align: right;
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	margin-right: 10px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+div#iconbox {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 186px;
+}
+
+div#iconleft {
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	border: 3px solid  rgba(30, 50, 50, 1.0);
+	border-right: 0;
+	border-radius: 25px 0px 0px 0px;
+	background: url('ICON1')
+}
+
+div#iconright {
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	border: 3px solid rgba(30, 50, 50, 1.0);
+	border-left: 0;
+	border-radius: 0px 0px 25px 0px;
+	background: url('ICON2');
+}
+
+img {
+	margin: 0px;
+	padding: 0px;
+}
+
+div#twitlinks {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	width: 185px;
+	height: 30px;
+	background: rgba(255, 255, 255, 0.7);
+	border-left: 3px solid rgba(30, 50, 50, 1.0);
+	border-top: 3px solid rgba(30, 50, 50, 1.0);
+	font-family: 'Fredoka One', cursive;
+	border-radius: 25px 0px 0px 0px;
+	font-size:15px;
+	margin:0;
+	padding:0;
+	padding-top:10px;
+	padding-left:10px;
+}
+</style>
+</head>
+<body>
+<div id="centerbox">
+<p>PROMPT</p>
+<div id="iconbox">
+<div id="iconleft">
+&nbsp;
+</div>
+<div id="iconright">
+&nbsp;
+</div>
+</div>
+<p id="randlink">
+<a href="https://twitter.com/intent/tweet?text=TWEET" target="popup" onclick="window.open('https://twitter.com/intent/tweet?text=TWEET', 'Tweet', 'width=600, height=400'); return false;">tweet this</a></br>
+<a href="/">okay but how about...</a>
+<p>
+</div>
+<div id="twitlinks">
+by: <a href="http://twitter.com/halcy">@halcy</a>, <a href="http://twitter.com/SaltyTuna">@SaltyTuna</a>
+</div>
+</body>
+</html>
