@@ -10,7 +10,7 @@ CHAR1 and CHAR2 cradling each other on a stormy night, watching a horror movie
 CHAR1 and CHAR2 celebrating on their first anniversary, but everything gets so chaotic it ends up ruined
 CHAR1 and CHAR2 going to a romantic restaurant for a night out
 CHAR1 and CHAR2 riding (Or trying to ride) a tandem bicycle through the park on a clear Autumn day
-CHAR1 and CHAR2 sitting beside each other at the park on their first date. They are nervous, and keep looking forward, saying nothing
+CHAR1 and CHAR2 sitting beside each other at the park on their first date. They are nervous,keep looking forward,saying nothing
 CHAR1 and CHAR2 playing the Pocky Game
 CHAR1 and CHAR2 going grocery shopping, and running into one of their mutual friends who doesn't yet know they are together
 CHAR1 getting jealous about CHAR2
@@ -142,3 +142,7 @@ CHAR1 and CHAR2 sharing a scarf on a cold winter day
 CHAR1 to CHAR2: "No matter what happens..please stay by my side."
 CHAR1 pulls CHAR2's dream UR
 CHAR1 and CHAR2 discussing and trying out each other's kinks
+CHAR1 to CHAR2: "If I can't have you..then no one else can."
+CHAR1 and CHAR2 buying and sharing Konpeito in Youkai Street.
+CHAR1 to CHAR2: "You are the best thing that happened to me."
+CHAR1 to CHAR2: "There's no way I can make you love me but...hear me out. Only this time."
