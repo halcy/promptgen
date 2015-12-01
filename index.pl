@@ -37,13 +37,19 @@ else {
 	
 	my $char1 = $shuffled_chars[0];
 	my $char2 = $shuffled_chars[1];
-	
+	my $char3 = $shuffled_chars[2];
+	my $char4 = $shuffled_chars[3];
+	my $char5 = $shuffled_chars[4];
+
 	my $img1 = "charicons/" . lc($char1) . ".png";
 	my $img2 = "charicons/" . lc($char2) . ".png";
 	
 	my $prompt = $shuffled_prompts[0];
 	$prompt =~ s/CHAR1/$char1/g;
 	$prompt =~ s/CHAR2/$char2/g;
+	$prompt =~ s/CHAR3/$char3/g;
+	$prompt =~ s/CHAR4/$char4/g;
+	$prompt =~ s/CHAR5/$char5/g;
 	my $prompt_tweet = $prompt;
 	$prompt = "$prompt.";
 	
