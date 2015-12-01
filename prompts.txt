@@ -146,3 +146,4 @@ CHAR1 to CHAR2: "If I can't have you..then no one else can."
 CHAR1 and CHAR2 buying and sharing Konpeito in Youkai Street.
 CHAR1 to CHAR2: "You are the best thing that happened to me."
 CHAR1 to CHAR2: "There's no way I can make you love me but...hear me out. Only this time."
+CHAR1 ruins CHAR2's live concert.
