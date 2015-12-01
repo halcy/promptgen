@@ -92,4 +92,4 @@ CHAR1 and CHAR2 being part of a gang together
 CHAR1 and CHAR2 visiting a foreign country together
 CHAR1 and CHAR2 arguing over who is taller
 CHAR1 worshipping CHAR2's body
-CHAR1 worshipping CHAR2
+CHAR1 worshipping
