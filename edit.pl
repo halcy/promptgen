@@ -30,7 +30,7 @@ if(defined $query->param('password') && defined $query->param('prompts')) {
 		close $outhandle;
 		my $mvcmd = 'mv ' . $prompts_file . '.tmp ' . $prompts_file;
 		my $permscmd = 'chmod a+rw ' . $prompts_file;
-		my $gitcmd = 'git commit -a -m "Prompts edited by IP ' . $query->remote_host() . '" 2>&1';
+		my $gitcmd = 'git add $prompts_file; git commit -m "Prompts edited by IP ' . $query->remote_host() . '" 2>&1';
 		print "<h1>Changes saved!</h1><hr>";
 		`$mvcmd`;
 		`$permscmd`;
