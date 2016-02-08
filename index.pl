@@ -43,6 +43,19 @@ else {
                 @prompts = @prompts[0..$promptlen-1];
         }
 
+	my @prompts_filtered = ();
+	for my $prompt (@prompts) {
+		if($prompt =~ /^DISABLE (.*)$/) {
+			if($query->param('plen')) {
+				push @prompts_filtered, $1;
+			}
+		}
+		else {
+			push @prompts_filtered, $prompt;
+		}
+	}
+	@prompts = @prompts_filtered;
+
 	my @shuffled_prompts = shuffle(@prompts);
 	close $handle;
 	
