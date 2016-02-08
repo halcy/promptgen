@@ -43,6 +43,9 @@ if(defined $query->param('password') && defined $query->param('prompts')) {
 }
 
 print "<h1>Edit prompts</h1>\n";
+print "<p>To ensure links keep working, you have to keep two things in mind:</p>";
+print "<ul><li>Add new prompts <b>at the end</b>.</li>";
+print "<li>Instead of deleting lines, just put DISABLE as the first word in them (i.e. \"DISABLE prompt text\").</li></ul>";
 print "<form action=\"edit.pl\" method=\"post\">";
 print "<p>";
 print "<textarea name=\"prompts\" rows=\"30\" cols=\"100\">";
