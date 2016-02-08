@@ -42,22 +42,33 @@ div#centerbox p#randlink {
 div#iconbox {
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;
-	width: 186px;
+	text-align: center;
+	width: 100%;
 }
 
 div#iconleft {
+	position: relative;
 	width: 90px;
 	height: 90px;
 	display: inline-block;
 	border: 3px solid  rgba(30, 50, 50, 1.0);
 	border-right: 0;
 	border-radius: 25px 0px 0px 0px;
-	background: url('ICON1')
+	background: url('ICON1');
+}
+
+div.iconmid {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        display: inline-block;
+        border: 3px solid rgba(30, 50, 50, 1.0);
+        border-left: 0;
+	border-right: 0;
 }
 
 div#iconright {
-	position: absolute;
+	position: relative;
 	width: 90px;
 	height: 90px;
 	display: inline-block;
@@ -97,8 +108,13 @@ div#twitlinks {
 <div id="iconbox">
 <div id="iconleft">
 &nbsp;
-</div>
-<div id="iconright">
+CHAR3: </div><div class="iconmid" style="background: url('ICON3')">
+CHAR3: &nbsp;
+CHAR4: </div><div class="iconmid" style="background: url('ICON4')">
+CHAR4: &nbsp;
+CHAR5: </div><div class="iconmid" style="background: url('ICON5')">
+CHAR5: &nbsp;
+</div><div id="iconright">
 &nbsp;
 </div>
 </div>

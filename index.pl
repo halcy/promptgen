@@ -43,8 +43,33 @@ else {
 
 	my $img1 = "charicons/" . lc($char1) . ".png";
 	my $img2 = "charicons/" . lc($char2) . ".png";
-	
+	my $img3 = "charicons/" . lc($char3) . ".png";
+	my $img4 = "charicons/" . lc($char4) . ".png";
+	my $img5 = "charicons/" . lc($char5) . ".png";
+
 	my $prompt = $shuffled_prompts[0];
+
+	my %qualifiers = {};
+        if($prompt =~ /CHAR1/) {
+                $qualifiers{"CHAR1"} = 1;
+        }
+	
+	if($prompt =~ /CHAR2/) {
+                $qualifiers{"CHAR2"} = 1;
+        }
+
+	if($prompt =~ /CHAR3/) {
+                $qualifiers{"CHAR3"} = 1;
+        }
+
+	if($prompt =~ /CHAR4/) {
+                $qualifiers{"CHAR4"} = 1;
+        }
+
+	 if($prompt =~ /CHAR5/) {
+                $qualifiers{"CHAR5"} = 1;
+        }
+
 	$prompt =~ s/CHAR1/$char1/g;
 	$prompt =~ s/CHAR2/$char2/g;
 	$prompt =~ s/CHAR3/$char3/g;
@@ -64,9 +89,20 @@ else {
 
 	print "Content-type: text/html\n\n";
 	for my $template_line (@template) {
+		my ($qualifier, $template_line_proper) = ($template_line =~ /^([A-Z0-9]+)\: (.*)$/);
+		if(defined $qualifier) {
+			$template_line = $template_line_proper;
+			if(!defined $qualifiers{$qualifier}) {
+				next;
+			}
+		}
+		
 		$template_line =~ s/PROMPT/$prompt/g;
 	        $template_line =~ s/ICON1/$img1/g;
         	$template_line =~ s/ICON2/$img2/g;
+		$template_line =~ s/ICON3/$img3/g;
+		$template_line =~ s/ICON4/$img4/g;
+		$template_line =~ s/ICON5/$img5/g;
 		$template_line =~ s/TWEET/$tweettext/g;
 		print "$template_line\n";
 	}
