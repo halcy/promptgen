@@ -21,12 +21,28 @@ else {
 	open my $handle, '<', $char_file;
 	chomp(my @chars = <$handle>);
 	map {$_ =~ s/^\s+|\s+$//g} @chars;
+
+	if($query->param('clen')) {
+		my $charlen = int($query->param('clen'));
+		$charlen = $charlen < 0 ? 0 : $charlen;
+		$charlen = $charlen > scalar @chars ? scalar @chars : $charlen;
+		@chars = @chars[0..$charlen-1];
+	}
+
 	my @shuffled_chars = shuffle(@chars);
 	close $handle;
 	
 	open $handle, '<', $prompts_file;
 	chomp(my @prompts = <$handle>);
 	map {$_ =~ s/^\s+|\s+$//g} @prompts;
+	
+	if($query->param('plen')) {
+                my $promptlen = int($query->param('plen'));
+                $promptlen = $promptlen < 0 ? 0 : $promptlen;
+                $promptlen = $promptlen > scalar @prompts ? scalar @prompts : $promptlen;
+                @prompts = @prompts[0..$promptlen-1];
+        }
+
 	my @shuffled_prompts = shuffle(@prompts);
 	close $handle;
 	
@@ -84,7 +100,11 @@ else {
 		$prompt_tweet = $prompt_tweet . " [...]";
 	}
 
-	my $tweettext = $prompt_tweet . ' ' . "http://sb69prompt.halcy.de/?seed=" . $seed . " #sb69prompt";
+	my $tweettext = $prompt_tweet . ' ' . 
+			"http://sb69prompt.halcy.de/?seed=" . $seed . 
+			"&plen=" . (scalar @shuffled_prompts) . 
+			"&clen=" . (scalar @shuffled_chars) . " #sb69prompt";
+
 	$tweettext = uri_escape($tweettext);
 
 	print "Content-type: text/html\n\n";
